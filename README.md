@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+It follows [this tutorial](https://novemberfive.co/blog/putting-apollo-client-to-rest-api-tutorial)
+
 ## Available Scripts
 
 In the project directory, you can run:
