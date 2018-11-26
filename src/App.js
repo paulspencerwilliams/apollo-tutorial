@@ -5,10 +5,10 @@ import {ApolloProvider} from "react-apollo";
 import {RestLink} from "apollo-link-rest";
 import {ApolloClient} from "apollo-client";
 import {InMemoryCache} from "apollo-cache-inmemory";
+import Users from "./Users";
 
 const restLink = new RestLink({
-  uri: 'https://regres.io',
-  credentials: 'same-origin',
+  uri: 'http://localhost:8080',
 });
 
 const client = new ApolloClient({
@@ -34,6 +34,7 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <Users/>
       </div>
     );
   }
