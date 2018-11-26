@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {ApolloProvider} from "react-apollo";
+import {RestLink} from "apollo-link-rest";
+import {ApolloClient} from "apollo-client";
+import {InMemoryCache} from "apollo-cache-inmemory";
+
+const restLink = new RestLink({
+  uri: 'https://regres.io',
+  credentials: 'same-origin',
+});
+
+const client = new ApolloClient({
+  link: restLink,
+  cache: new InMemoryCache(),
+});
 
 class App extends Component {
   render() {
@@ -25,4 +39,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const ApolloApp = () => (
+    <ApolloProvider client={client}>
+      <App/>
+    </ApolloProvider>
+);
+
+export default ApolloApp;
