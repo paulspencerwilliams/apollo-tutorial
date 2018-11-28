@@ -1,0 +1,7 @@
+query userQuery {
+  users @rest(type: "Users", path: "/users") {
+    id
+    firstName
+    lastName
+  }
+}
