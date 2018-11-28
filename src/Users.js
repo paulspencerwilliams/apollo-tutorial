@@ -1,6 +1,7 @@
 import React, {PureComponent} from "react";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
+import './Users.scss';
 
 const USERS_QUERY = gql`
   query userQuery {
